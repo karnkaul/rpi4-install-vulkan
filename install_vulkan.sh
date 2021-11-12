@@ -74,7 +74,7 @@ if [[ -d "$src" && ! -d "$src/.git" ]]; then
 fi
 if [ ! -d "$src" ]; then
   echo -e "\nCloning mesa into $src..."
-  git clone $url "$src" || exit 1
+  git clone --depth 1 $url "$src" || exit 1
 fi
 
 # get latest
