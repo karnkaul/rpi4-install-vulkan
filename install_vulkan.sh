@@ -67,6 +67,11 @@ cwd=$(pwd)
 sudo apt update -y
 sudo apt install -y xorg-dev libvulkan-dev libvulkan1 vulkan-tools ninja-build clang lld
 
+# install build deps
+build_deps='meson python3-mako libx11-xcb-dev libxcb-dri2-0-dev libxcb-dri3-dev libxcb-present-dev libxcb-shm0-dev libxshmfence-dev bison flex'
+sudo apt install -y $build_deps
+sudo apt-mark auto $build_deps  # allow removal on autoremove
+
 # clone mesa
 if [[ -d "$src" && ! -d "$src/.git" ]]; then
   echo -e "\n$src/.git not found, purging contents for fresh clone..."
