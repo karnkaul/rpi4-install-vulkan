@@ -6,6 +6,11 @@ _Tested on Linux rpi4 5.10.63-v8+ aarch64._
 
 ![vkcube screenshot](screenshot_vkcube.jpg)
 
+## Note
+
+The latest version of `libdrm` (currently 2.4.110) seems to now be a required dependency.
+Refer to this excellent [PR comment](https://github.com/karnkaul/rpi4-install-vulkan/issues/4#issuecomment-1114176707) for more info.
+
 ## Usage
 
 1. Clone / copy / download script
